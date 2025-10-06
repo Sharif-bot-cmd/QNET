@@ -64,7 +64,7 @@ ipfs daemon
 
 Local: http://127.0.0.1:8080
 
-IPFS: http://127.0.0.1:8081/ipfs/Qmb3ppbHHu38G66esPBYTxZX9PZggYrre6oGmFEu5L7MdN
+IPFS: http://127.0.0.1:8081/ipfs/QmPYqvQasLwy3zkwKhoY6FmHT9dXSSuL5FKrjdx1g8Geyr
 
 Cloudflare/Ngrok tunnel (auto-generated)
 
