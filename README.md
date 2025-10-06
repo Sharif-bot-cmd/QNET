@@ -2,11 +2,11 @@
 
 ## What’s New in QNET 1.1
 
-> DuckDuckGo-Style Search
-Clean, readable results with titles, snippets, and metadata.
+> Enhanced Search Experience
+A modern DuckDuckGo-style search interface with clean titles, readable snippets, and structured metadata — all rendered locally inside QNET for a smoother, private experience.
 
-> /go Secure Redirect System
-Safely open external or IPFS links without leaving QNET — complete with confirmation and “Return Home.”
+> /go Secure Redirect Gateway
+Safely explore external or IPFS links without ever leaving QNET. Each redirect includes confirmation, a visible destination preview, and a quick “Return Home” option to keep you fully inside your decentralized space.
 
 QNET is a self-contained, privacy-first micro network that transforms your device into a decentralized web portal — capable of operating **offline**, through **I2P/TOR/IPFS**, or globally via **Cloudflare Tunnel** or **Ngrok**.
 
