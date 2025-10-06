@@ -50,6 +50,27 @@ It combines edge computing, local-first design, and network autonomy in a single
 
 ---
 
+## 🧰 Installation & Setup
+
+QNET 1.0 is cross-platform and runs on **Linux**, **Android (Termux)**, **macOS**, and **Windows (via WSL or Git Bash)**.
+
+Before running QNET, make sure you have:
+- Python 3.10+  
+- pip (Python package manager)  
+- IPFS  
+- curl  
+- wget  
+
+---
+
+### 🔧 Quick Setup (Recommended)
+
+QNET includes an automatic environment setup script that installs all dependencies for you.
+
+Run this command from the project folder:
+---
+bash setup.sh
+
 ## 📚 Usage
 
 1. Run qnet.py (online/offline)
