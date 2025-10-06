@@ -37,18 +37,6 @@ It combines edge computing, local-first design, and network autonomy in a single
 - Cross-Platform Support
   - Runs seamlessly on Android (Termux), Linux, macOS, Windows, etc.
 
----
-
-## 🌐 Live Mirrors
-
-- Local access: [http://124.217.57.22:8080]
-- IPFS Gateway: [http://127.0.0.1:8081/ipfs/Qmb3ppbHHu38G66esPBYTxZX9PZggYrre6oGmFEu5L7MdN]
-
-Cloudflare Tunnels:
-- [https://symantec-certificate-insert-pottery.trycloudflare.com](https://symantec-certificate-insert-pottery.trycloudflare.com)  
-- [https://advisors-switching-commissioner-subsidiaries.trycloudflare.com](https://advisors-switching-commissioner-subsidiaries.trycloudflare.com)  
-- [https://val-seed-fisher-terrorists.trycloudflare.com](https://val-seed-fisher-terrorists.trycloudflare.com)  
-
 > ⚠️ Note: IPFS mirror requires a running IPFS daemon (`ipfs daemon`) to access content locally.
 
 ---
