@@ -1,4 +1,12 @@
-# 🌐 QNET 1.0: Hybrid Decentralized Web Node
+# 🌐 QNET: Hybrid Decentralized Web Node
+
+## What’s New in QNET 1.1
+
+> DuckDuckGo-Style Search
+Clean, readable results with titles, snippets, and metadata.
+
+> /go Secure Redirect System
+Safely open external or IPFS links without leaving QNET — complete with confirmation and “Return Home.”
 
 QNET is a self-contained, privacy-first micro network that transforms your device into a decentralized web portal — capable of operating **offline**, through **I2P/TOR/IPFS**, or globally via **Cloudflare Tunnel** or **Ngrok**.
 
@@ -85,7 +93,7 @@ ipfs daemon
 
 Local: http://127.0.0.1:8080
 
-IPFS: http://127.0.0.1:8081/ipfs/QmPYqvQasLwy3zkwKhoY6FmHT9dXSSuL5FKrjdx1g8Geyr
+IPFS: http://127.0.0.1:8081/ipfs/QmSk6tx2phgMny2guUoSgYdBXgMuWCPXT3ppJY8NYGqiLZ
 
 Cloudflare/Ngrok tunnel (auto-generated)
 
