@@ -1,0 +1,20 @@
+# --- Core Framework ---
+fastapi
+uvicorn
+
+# --- Async File Handling & Uploads ---
+aiofiles
+python-multipart
+
+# --- HTTP Requests & Networking ---
+requests
+
+# --- Template Rendering (for HTML responses) ---
+jinja2
+
+# --- Task Scheduling / Auto-Backup ---
+schedule
+
+# --- Optional Utilities (recommended but optional) ---
+pytz
+rich
