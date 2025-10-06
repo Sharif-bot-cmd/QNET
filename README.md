@@ -64,17 +64,21 @@ Cloudflare Tunnels:
 
 ## 📚 Usage
 
-1. Ensure your IPFS daemon is running for local content:  
-   ---
-   ipfs daemon
+1. Run qnet.py (online/offline)
+---
+python qnet.py
 
-2. Open your preferred mirror in a browser (local, IPFS, or Cloudflare tunnel).
+3. Ensure your IPFS daemon is running for local content:  
+---
+ipfs daemon
 
-3. Upload files (videos, posts, leaks) via the dashboard.
+5. Open your preferred mirror in a browser (local, IPFS, or Cloudflare tunnel).
 
-4. Share links from IPFS or Cloudflare if desired.
+6. Upload files (videos, posts, leaks) via the dashboard.
 
-5. Adjust security levels via the dashboard to control network exposure.
+7. Share links from IPFS or Cloudflare if desired.
+
+8. Adjust security levels via the dashboard to control network exposure.
 
 ⚡ Contributing
 
