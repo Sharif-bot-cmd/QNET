@@ -1126,7 +1126,7 @@ if __name__ == "__main__":
 
     port = int(os.getenv("QNET_PORT", 8080))
 
-    print(f"🌐 QNET v1.0 starting on 0.0.0.0:{port}")
+    print(f"🌐 QNET starting on 0.0.0.0:{port}")
     print(f"➡ Local access: http://{host_ip}:{port}")
     print("🌍 If you see a Cloudflare / Ngrok / I2P / Tor link below, global access is active.")
 
