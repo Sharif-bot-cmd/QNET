@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# 🌐 QNET Setup Script (cross-platform)
-# Prepares environment by installing dependencies & tools.
+# 🌐 QNET Setup Script (Hybrid Node 1.1+)
+# Prepares environment by installing Python dependencies, IPFS, Cloudflared, and Ngrok.
 
 echo "==============================================="
 echo "     QNET Environment Setup (Hybrid Node)"
@@ -33,7 +33,7 @@ if ! command -v pip3 &>/dev/null; then
 fi
 
 # -----------------------
-# 3. Install IPFS, curl, wget
+# 3. Install helper packages (curl, wget, unzip)
 # -----------------------
 install_pkg() {
     pkg_name=$1
@@ -46,34 +46,79 @@ install_pkg() {
         elif [[ "$OS" == *"darwin"* ]]; then
             brew install "$pkg_name"
         else
-            echo "[!] Please install $pkg_name manually (Windows users: use WSL or Git Bash)."
+            echo "[!] Please install $pkg_name manually."
         fi
     else
         echo "[✓] $pkg_name already installed."
     fi
 }
 
-for tool in ipfs curl wget; do
+for tool in curl wget unzip; do
     install_pkg "$tool"
 done
 
 # -----------------------
-# 4. Python dependencies
+# 4. Install IPFS (Kubo)
+# -----------------------
+if ! command -v ipfs &>/dev/null; then
+    echo "[i] Installing IPFS (Kubo)..."
+    IPFS_VERSION="v0.31.0"
+    wget -q "https://dist.ipfs.tech/kubo/${IPFS_VERSION}/kubo_${IPFS_VERSION}_linux-amd64.tar.gz" -O kubo.tar.gz
+    tar -xzf kubo.tar.gz && cd kubo && sudo bash install.sh && cd ..
+    ipfs init || true
+    echo "[✓] IPFS installed successfully."
+else
+    echo "[✓] IPFS already installed."
+fi
+
+# -----------------------
+# 5. Install Cloudflared
+# -----------------------
+if ! command -v cloudflared &>/dev/null; then
+    echo "[i] Installing Cloudflared..."
+    curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -o cloudflared
+    chmod +x cloudflared && sudo mv cloudflared /usr/local/bin/
+    echo "[✓] Cloudflared installed successfully."
+else
+    echo "[✓] Cloudflared already installed."
+fi
+
+# -----------------------
+# 6. Install Ngrok
+# -----------------------
+if ! command -v ngrok &>/dev/null; then
+    echo "[i] Installing Ngrok..."
+    curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null
+    echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list
+    sudo apt update && sudo apt install -y ngrok
+    echo "[✓] Ngrok installed successfully."
+    echo "[!] Run: ngrok config add-authtoken <YOUR_TOKEN> after setup."
+else
+    echo "[✓] Ngrok already installed."
+fi
+
+# -----------------------
+# 7. Python dependencies
 # -----------------------
 echo "[i] Installing Python dependencies..."
 if [ -f "requirements.txt" ]; then
-    pip install --upgrade -r requirements.txt
+    pip3 install --upgrade -r requirements.txt
 else
     echo "[!] requirements.txt not found. Skipping Python dependency install."
 fi
 
 # -----------------------
-# 5. Final check
+# 8. Final check
 # -----------------------
 echo ""
 echo "==============================================="
 echo "✅ QNET setup complete!"
 echo "Run your node using:  python3 qnet.py"
 echo "-----------------------------------------------"
-echo "📦 Installed tools: python3, pip, ipfs, curl, wget"
+echo "📦 Installed tools:"
+echo "  - Python3 + pip"
+echo "  - IPFS (Kubo)"
+echo "  - Cloudflared"
+echo "  - Ngrok"
+echo "  - curl, wget, unzip"
 echo "==============================================="
