@@ -40,7 +40,7 @@ install_pkg() {
     if ! command -v "$pkg_name" &>/dev/null; then
         echo "[i] Installing $pkg_name..."
         if [[ "$OS" == *"android"* ]]; then
-            pkg install -y "$pkg_name"
+            apt install -y "$pkg_name"
         elif [[ "$OS" == *"linux"* ]]; then
             sudo apt update && sudo apt install -y "$pkg_name"
         elif [[ "$OS" == *"darwin"* ]]; then
