@@ -18,3 +18,5 @@ schedule
 # --- Optional Utilities (recommended but optional) ---
 pytz
 rich
+itsdangerous
+flask
