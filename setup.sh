@@ -63,7 +63,7 @@ done
 if ! command -v ipfs &>/dev/null; then
     echo "[i] Installing IPFS (Kubo)..."
     IPFS_VERSION="v0.31.0"
-    wget -q "https://dist.ipfs.tech/kubo/${IPFS_VERSION}/kubo_${IPFS_VERSION}_linux-amd64.tar.gz" -O kubo.tar.gz
+    wget -q "https://dist.ipfs.tech/kubo/${IPFS_VERSION}/kubo_${IPFS_VERSION}_linux-arm64.tar.gz" -O kubo.tar.gz
     tar -xzf kubo.tar.gz && cd kubo && sudo bash install.sh && cd ..
     ipfs init || true
     echo "[✓] IPFS installed successfully."
@@ -76,7 +76,7 @@ fi
 # -----------------------
 if ! command -v cloudflared &>/dev/null; then
     echo "[i] Installing Cloudflared..."
-    curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -o cloudflared
+    curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64 -o cloudflared
     chmod +x cloudflared && sudo mv cloudflared /usr/local/bin/
     echo "[✓] Cloudflared installed successfully."
 else
