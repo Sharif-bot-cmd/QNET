@@ -1,12 +1,20 @@
 # 🌐 QNET: Hybrid Decentralized Web Node
 
-## What’s New in QNET 1.1
+## What’s New in QNET 1.2
 
-> Enhanced Search Experience
-A modern DuckDuckGo-style search interface with clean titles, readable snippets, and structured metadata — all rendered locally inside QNET for a smoother, private experience.
+> In-Node Web Preview System
+QNET now includes a built-in /preview sandbox — view external websites, IPFS pages, and links without ever leaving your node.
+All requests are proxied, framed, and sanitized to keep you anonymous and tracking-free.
 
-> /go Secure Redirect Gateway
-Safely explore external or IPFS links without ever leaving QNET. Each redirect includes confirmation, a visible destination preview, and a quick “Return Home” option to keep you fully inside your decentralized space.
+> Private Search 
+The /search tab now performs hybrid local + DuckDuckGo lookups, but every external result opens through the new /preview layer — meaning no redirection, no new tabs, no trackers.
+
+> User Accounts (Sign Up / Login)
+Local JSON-based registration added for self-hosted authentication.
+Passwords are SHA-256 hashed and never transmitted externally.
+
+> YouTube / Invidious Bridge
+QNET auto-detects reachable Invidious instances and falls back to the YouTube Data API v3 for seamless video search and playback inside QNET.
 
 QNET is a self-contained, privacy-first micro network that transforms your device into a decentralized web portal — capable of operating **offline**, through **I2P/TOR/IPFS**, or globally via **Cloudflare Tunnel** or **Ngrok**.
 
