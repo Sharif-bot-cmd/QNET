@@ -1,6 +1,7 @@
 # --- Core Framework ---
 fastapi
 uvicorn
+pynacl
 
 # --- Async File Handling & Uploads ---
 aiofiles
