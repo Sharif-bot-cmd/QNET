@@ -1,24 +1,28 @@
 # 🌐 QNET: Hybrid Decentralized Web Node
 
-## What’s New in QNET 1.3
+## What’s New in QNET 1.4
 
-- Fixed critical login bug where valid accounts returned “Invalid username/password.”
-- Unified `signup` and `login` to use the same `users.json` database.
-- Implemented proper password verification with `verify_pw()` (supports salted hashes).
-- Simplified session management using signed cookies (`sign()` / `verify_signed()`).
-- Added runtime `SESSION_DATA` fallback to prevent session errors.
-- Improved logout reliability (cookie cleanup and redirect flow).
-- Cleaned `get_user()` logic — now checks `users.json` instead of `accounts.json`.
-- Strengthened file upload sanitization to prevent unsafe filenames.
-- Enhanced database loader for safer JSON reads and writes.
-- Added consistent cookie preservation across all pages.
-- Improved stability for `detect_mode()` and global tunnel startup logs.
-- Polished profile header: clear “Logged in as … | Logout” display.
-- Fixed cookie persistence so login status remains visible across tabs.
-- Added minor CSS refinements and code readability improvements.
-- Hardened request handling with extra exception safety.
-- Reduced blocking behavior in network detection and tunnel start.
-- General refactoring for smoother offline-first behavior.
+- Cached `state.json` allows instant boot using last known mode.
+- Background network probing (IPFS, I2P, TOR) runs asynchronously.
+- Full offline support with cached state and deferred sync.
+- Parallel detection for IPFS / I2P / TOR (`detect_mode()` upgraded).
+- Auto-starts local daemons if not running.
+- Multi-mode support (`MULTI`) for hybrid networks.
+- Each QNET node now generates its own cryptographic identity.
+- Based on [NaCl (libsodium)](https://pynacl.readthedocs.io/) signing keys.
+- Stored locally in `did.json`.
+- Used to verify authenticity of posts, uploads, and peer syncs.
+- New **LAN broadcast discovery** (`announce_peer()` + `listen_for_peers()`).
+- Automatic peer merging — no manual editing of `peers.json`.
+- `/api/sync` endpoint allows nodes to exchange databases directly.
+- Background sync thread runs continuously without blocking UI.
+- Automatic JSON database backup every 6 hours (`/backups/`).
+- Integrity check & recovery if corruption is detected.
+- Fully offline repair cycle with no external dependencies.
+- Filename sanitization on uploads (no traversal or injection).
+- Simple IP-based rate limiter (30 requests/minute per client).
+- Thread-safe state saving with atomic `.tmp` write replacement.
+- Live decentralized status badge at bottom-left of every page.
 
 ---
 
