@@ -1,24 +1,24 @@
 # 🌐 QNET: Hybrid Decentralized Web Node
 
-## What’s New in QNET 1.2
+## What’s New in QNET 1.3
 
-> In-Node Web Preview System
-QNET now includes a built-in /preview sandbox — view external websites, IPFS pages, and links without ever leaving your node.
-All requests are proxied, framed, and sanitized to keep you anonymous and tracking-free.
-
-> Private Search 
-The /search tab now performs hybrid local + DuckDuckGo lookups, but every external result opens through the new /preview layer — meaning no redirection, no new tabs, no trackers.
-
-> User Accounts (Sign Up / Login)
-Local JSON-based registration added for self-hosted authentication.
-Passwords are SHA-256 hashed and never transmitted externally.
-
-> YouTube / Invidious Bridge
-QNET auto-detects reachable Invidious instances and falls back to the YouTube Data API v3 for seamless video search and playback inside QNET.
-
-QNET is a self-contained, privacy-first micro network that transforms your device into a decentralized web portal — capable of operating **offline**, through **I2P/TOR/IPFS**, or globally via **Cloudflare Tunnel** or **Ngrok**.
-
-It’s lightweight, fast, and designed to run anywhere — from Linux and Android (Termux) to macOS or Windows.
+- Fixed critical login bug where valid accounts returned “Invalid username/password.”
+- Unified `signup` and `login` to use the same `users.json` database.
+- Implemented proper password verification with `verify_pw()` (supports salted hashes).
+- Simplified session management using signed cookies (`sign()` / `verify_signed()`).
+- Added runtime `SESSION_DATA` fallback to prevent session errors.
+- Improved logout reliability (cookie cleanup and redirect flow).
+- Cleaned `get_user()` logic — now checks `users.json` instead of `accounts.json`.
+- Strengthened file upload sanitization to prevent unsafe filenames.
+- Enhanced database loader for safer JSON reads and writes.
+- Added consistent cookie preservation across all pages.
+- Improved stability for `detect_mode()` and global tunnel startup logs.
+- Polished profile header: clear “Logged in as … | Logout” display.
+- Fixed cookie persistence so login status remains visible across tabs.
+- Added minor CSS refinements and code readability improvements.
+- Hardened request handling with extra exception safety.
+- Reduced blocking behavior in network detection and tunnel start.
+- General refactoring for smoother offline-first behavior.
 
 ---
 
