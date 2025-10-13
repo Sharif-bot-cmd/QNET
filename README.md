@@ -1,28 +1,8 @@
 # 🌐 QNET: Hybrid Decentralized Web Node
 
-## What’s New in QNET 1.4
+## What’s New in QNET 1.5
 
-- Cached `state.json` allows instant boot using last known mode.
-- Background network probing (IPFS, I2P, TOR) runs asynchronously.
-- Full offline support with cached state and deferred sync.
-- Parallel detection for IPFS / I2P / TOR (`detect_mode()` upgraded).
-- Auto-starts local daemons if not running.
-- Multi-mode support (`MULTI`) for hybrid networks.
-- Each QNET node now generates its own cryptographic identity.
-- Based on [NaCl (libsodium)](https://pynacl.readthedocs.io/) signing keys.
-- Stored locally in `did.json`.
-- Used to verify authenticity of posts, uploads, and peer syncs.
-- New **LAN broadcast discovery** (`announce_peer()` + `listen_for_peers()`).
-- Automatic peer merging — no manual editing of `peers.json`.
-- `/api/sync` endpoint allows nodes to exchange databases directly.
-- Background sync thread runs continuously without blocking UI.
-- Automatic JSON database backup every 6 hours (`/backups/`).
-- Integrity check & recovery if corruption is detected.
-- Fully offline repair cycle with no external dependencies.
-- Filename sanitization on uploads (no traversal or injection).
-- Simple IP-based rate limiter (30 requests/minute per client).
-- Thread-safe state saving with atomic `.tmp` write replacement.
-- Live decentralized status badge at bottom-left of every page.
+- All Security level is now fully functional 
 
 ---
 
