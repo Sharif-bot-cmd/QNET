@@ -52,7 +52,7 @@ It combines edge computing, local-first design, and network autonomy in a single
 
 ## 🧰 Installation & Setup
 
-QNET 1.0 is cross-platform and runs on **Linux**, **Android (Termux)**, **macOS**, and **Windows (via WSL or Git Bash)**.
+QNET is cross-platform and runs on **Linux**, **Android (Termux)**, **macOS**, and **Windows (via WSL or Git Bash)**.
 
 Before running QNET, make sure you have:
 - Python 3.10+  
