@@ -1,9 +1,18 @@
 # 🌐 QNET: Hybrid Decentralized Web Node
 
-## What’s New in QNET 1.5
+## What’s New in QNET 1.6
 
-- All Security level is now fully functional 
+> A new Experimental security level has been added to the Settings page, extending beyond the existing Standard, Safer, and Safest tiers.
 
+# Key Capabilities:
+
+- Entropy-driven randomization: Every outbound request dynamically rotates its User-Agent, timing, and identity seed.
+
+- Dynamic tunnel rotation: Automatically randomizes between Cloudflare and Ngrok tunnels for each session.
+
+- Adaptive resilience: Adjusts its network paths when blocking is detected — ensuring uptime even in restrictive networks.
+
+- Quantum-style timing jitter: Adds micro-delays to mimic natural traffic and resist automated detection systems.
 ---
 
 ## ✨ Why QNET Stands Out
