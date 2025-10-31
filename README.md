@@ -38,6 +38,7 @@ It combines edge computing, local-first design, and network autonomy in a single
   - 🟢 **Standard**: Global tunnels active  
   - 🟡 **Safer**: Encrypted peers only  
   - 🔴 **Safest**: Fully offline, no external tunnels
+  - 🟣 **Experimental**: Additional protection for greater anonymity 
 
 - **Web Dashboard**
   - Terminal-inspired green-on-black interface.
