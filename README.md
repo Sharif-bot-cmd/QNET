@@ -111,17 +111,6 @@ Share IPFS or Cloudflare links directly.
 
 Use Settings → Security Level to switch between Standard, Safer, or Safest.
 
-## 🪙 Bitcoin Donations
-
-QNET is a passion-driven, open-source decentralized web node.
-If you’d like to support development, maintenance, and infrastructure, you can donate Bitcoin directly:
-
-Bitcoin Address:
-bc1qpcaqkzpe028ktpmeyevwdkycg9clxfuk8dty5v
-
-Every contribution helps maintain a censorship-resistant, privacy-first ecosystem.
-Thank you for keeping QNET decentralized 🌍
-
 ⚡ Contributing
 
 QNET is open-source and welcomes contributions that improve privacy, performance, and cross-platform compatibility.
